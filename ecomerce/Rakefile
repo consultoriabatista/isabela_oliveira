@@ -1,3 +1,15 @@
+ # without headless tasks
+
+ # para rodar com parametros no terminal tem que rodar assim
+ # rake fast'[headless, hmg]'
+ desc 'Execute scenarios with tag one with format pretty'
+ task :fast, [:environment, :vai] do |_task, args|
+   sh "bundle exec cucumber -t@two -p html -p pretty -p #{args[:vai]} -p #{args[
+       :environment]}"
+ end
+
+ # e para rodar um comando sem parametros basta passar o nome da task
+ # rake test_chrome_dev
 desc "Executar os testes em dev usando o Chrome"
 task :test_chrome_dev do
   puts "Executando test:chrome:dev"
