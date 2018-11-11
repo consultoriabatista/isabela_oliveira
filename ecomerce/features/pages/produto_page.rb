@@ -69,3 +69,13 @@ find("div[:'data-myval']").text
 page.have_css('css') retorna true ou false
 puts page.have_css('css')
 expect(page.have_css('css')).to eql true
+
+#mouse hover
+mouse = find('elemento').hover
+mouse.find('elemento').hover.click
+
+
+#dropdown
+#primeiro clica depois clica no texto
+find('elemento').click
+find('elemento', text: 'texto').click
