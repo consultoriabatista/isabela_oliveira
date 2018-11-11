@@ -74,6 +74,12 @@ expect(page.have_css('css')).to eql true
 mouse = find('elemento').hover
 mouse.find('elemento').hover.click
 
+#exemplo dois
+visit 'https://www.walmart.com.br/especial/blackfriday/esquenta/?fq=H:43330&refsmkt=8442136;8442142;4723433&utmi_p=wm-desktop/home-promo&utmi_cp=-wm-home-controle-051118&utmi_pc=x95-Desktop-home-0-0-0-tv_flash-0-01-Esquenta-Note-Dove-061118'
+
+@teste = find('.site-menu-container > #site-menu > ul > .menu-item:nth-child(3)')
+@teste.hover
+@teste.hover.find('.categories > .item', text:'Brastemp').click
 
 #dropdown
 #primeiro clica depois clica no texto
